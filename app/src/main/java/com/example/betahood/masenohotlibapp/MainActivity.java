@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -104,13 +105,24 @@ public class MainActivity extends AppCompatActivity
 
         }
         else if (id == R.id.nav_share) {
-            //handle the share action
 
+            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem menuItem) {
+                    Intent share = new Intent(Intent.ACTION_SEND);
+                    share.setType("plain/text");
+                    share.putExtra(Intent.EXTRA_EMAIL, new String[]{"_ _ _"});
+                    share.putExtra(Intent.EXTRA_SUBJECT, new String[]{"_ _ _"});
+                    startActivity(Intent.createChooser(share, "Share with friends"));
+                    return true;
+                }
+            });
         }
         else if (id == R.id.nav_about) {
 
             //handle the about us action
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
