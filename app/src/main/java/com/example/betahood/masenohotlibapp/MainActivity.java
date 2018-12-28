@@ -122,6 +122,8 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_about) {
 
             //handle the about us action
+            Intent intent = new Intent(MainActivity.this, AboutUs.class);
+            startActivity(intent);
         }
 
 

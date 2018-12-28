@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_login"
+    tools:context=".AboutUs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="0dp"
+            android:padding="16dp"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp"
+            android:text="Maseno HotLib App"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="1dp"
+            android:text="Version 1.0"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/aboutus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp"
+            android:text="@string/about"
+            android:textColor="@color/white"
+            android:justificationMode="inter_word"
+            android:textSize="17sp" />
+
+        <View
+            android:id="@+id/toggleview"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:layout_alignParentBottom="true"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"
+                android:text="Copyright@2019Betahood All Rights Reserved" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

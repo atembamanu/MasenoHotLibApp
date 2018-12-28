@@ -7,5 +7,6 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="welcome_message">Find, download and Share lecture notes, exam pastpapers and the best learning resources</string>
+    <string name="about">This android application is a learning application that will assist students get lecture notes, past examination papers and more useful resources from various credible sources.</string>
 
 </resources>
