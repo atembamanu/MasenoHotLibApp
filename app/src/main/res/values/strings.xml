@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Maseno HotLib App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Maseno HotLib</string>
+    <string name="nav_header_subtitle">Find &amp; share the best learning Resources</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_message">Find, download and Share lecture notes, exam pastpapers and the best learning resources</string>
+
+</resources>

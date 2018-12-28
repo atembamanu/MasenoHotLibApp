@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/new_login">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="48dp"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/splash_masenologo"
+            android:layout_width="91dp"
+            android:layout_height="125dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="48dp"
+            android:paddingRight="10dp"
+            android:layout_toStartOf="@+id/splash_hotliblogo"
+            android:src="@drawable/maseno" />
+
+        <ImageView
+            android:id="@+id/splash_hotliblogo"
+            android:layout_width="91dp"
+            android:layout_height="125dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/icon" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:padding="16dp"
+        android:text="Welcome To Maseno HotLib App"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/welcome_string"
+        android:layout_width="301dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:padding="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/welcome_message"
+        android:justificationMode="inter_word"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+    <ProgressBar
+        android:layout_below="@+id/welcome_string"
+        android:id="@+id/progressBarLoader"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

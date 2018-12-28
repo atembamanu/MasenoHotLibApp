@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_login"
+        tools:context=".settings_activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+        <TextView
+            android:id="@+id/push_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_notifications"
+            android:drawablePadding="12dp"
+            android:hint="Push Notifications"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:textColorHint="#000000" />
+
+        <TextView
+            android:id="@+id/new_push"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/push_notifications"
+            android:layout_marginBottom="-10dp"
+            android:gravity="center"
+            android:layout_marginStart="43dp"
+            android:text="Notifies you when a new resource is available"
+            android:textColor="@color/black_overlay"
+            android:textSize="13sp" />
+
+        <ToggleButton
+            android:id="@+id/toggle_push"
+            android:textColor="@color/blue_primary"
+            android:layout_alignEnd="@id/push_notifications"
+            android:layout_width="50dp"
+            android:layout_height="40dp" />
+
+        <View
+            android:id="@+id/pushview"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@id/new_push"
+            android:layout_marginBottom="-6dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/change_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/push_notifications"
+            android:layout_marginBottom="-57dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_theme"
+            android:drawablePadding="12dp"
+            android:hint="Dark Theme"
+            android:padding="8dp"
+            android:textColorHint="#000000"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/new_theme_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/change_theme"
+            android:layout_marginBottom="-10dp"
+            android:gravity="center"
+            android:layout_marginStart="43dp"
+            android:text="Switch from light theme to dark theme"
+            android:textColor="@color/black_overlay"
+            android:textSize="13sp" />
+
+        <ToggleButton
+            android:id="@+id/toggle_theme"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignEnd="@+id/push_notifications"
+            android:layout_alignRight="@id/change_theme"
+            android:layout_alignBottom="@+id/change_theme"
+            android:textColor="@color/blue_primary" />
+
+
+        <View
+            android:id="@+id/toggleview"
+            android:layout_alignBottom="@id/new_theme_text"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="-6dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/change_theme"
+            android:layout_marginBottom="-57dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_update"
+            android:drawablePadding="12dp"
+            android:hint="Update"
+            android:padding="8dp"
+            android:textColorHint="#000000"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/new_update_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/update"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginStart="43dp"
+            android:text="Update to the latest version with latest features"
+            android:textColor="@color/black_overlay"
+            android:textSize="13sp" />
+        <View
+            android:id="@+id/update_view"
+            android:layout_alignBottom="@id/new_update_data"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="-6dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/help_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/update"
+            android:layout_marginBottom="-57dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_feedback"
+            android:drawablePadding="12dp"
+            android:hint="Help &amp; Feedback"
+            android:padding="8dp"
+            android:textColorHint="#000000"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/new_help_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/help_feedback"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginStart="43dp"
+            android:text="Contact us for help and send us feedback"
+            android:textColor="@color/black_overlay"
+            android:textSize="13sp" />
+        <View
+            android:id="@+id/help_view"
+            android:layout_alignBottom="@id/new_help_tv"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="-6dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/like_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/help_feedback"
+            android:layout_marginBottom="-57dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_like"
+            android:drawablePadding="12dp"
+            android:hint="Rate Us"
+            android:padding="8dp"
+            android:textColorHint="#000000"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/new_like_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/like_us"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginStart="43dp"
+            android:text="Rate us 5 star on Google Play"
+            android:textColor="@color/black_overlay"
+            android:textSize="13sp" />
+
+        <View
+            android:id="@+id/like_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@id/new_like_tv"
+            android:layout_marginBottom="-6dp"
+            android:background="@color/gray" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
