@@ -111,8 +111,9 @@ public class MainActivity extends AppCompatActivity
                 public boolean onMenuItemClick(MenuItem menuItem) {
                     Intent share = new Intent(Intent.ACTION_SEND);
                     share.setType("plain/text");
-                    share.putExtra(Intent.EXTRA_EMAIL, new String[]{"_ _ _"});
-                    share.putExtra(Intent.EXTRA_SUBJECT, new String[]{"_ _ _"});
+                    String shareBodyText = "Check this cool learning android application <Maseno HotLib App on Play Store>";
+                    share.putExtra(android.content.Intent.EXTRA_SUBJECT, "Maseno HotLib App");
+                    share.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
                     startActivity(Intent.createChooser(share, "Share with friends"));
                     return true;
                 }
