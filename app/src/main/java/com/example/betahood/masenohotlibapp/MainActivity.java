@@ -1,6 +1,7 @@
 package com.example.betahood.masenohotlibapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the home action
+            //takes you back to home page.
         } else if (id == R.id.nav_forum) {
             //handle the forum action
 
@@ -102,6 +103,10 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_studentportal) {
             //handle the student portal action
+            String uri = "http://41.89.192.20/Login.aspx";
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(uri));
+            startActivity(intent);
 
         }
         else if (id == R.id.nav_share) {
