@@ -16,10 +16,13 @@
             android:background="@android:color/transparent"
             android:drawableStart="@drawable/ic_notifications"
             android:drawablePadding="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
             android:hint="Push Notifications"
             android:padding="8dp"
             android:textSize="18sp"
-            android:textColorHint="#000000" />
+            android:textColorHint="@color/white" />
 
         <TextView
             android:id="@+id/new_push"
@@ -30,7 +33,7 @@
             android:gravity="center"
             android:layout_marginStart="43dp"
             android:text="Notifies you when a new resource is available"
-            android:textColor="@color/black_overlay"
+            android:textColor="@color/gray_very_light"
             android:textSize="13sp" />
 
         <ToggleButton
@@ -57,9 +60,12 @@
             android:background="@android:color/transparent"
             android:drawableStart="@drawable/ic_theme"
             android:drawablePadding="12dp"
+            android:foreground="?selectableItemBackground"
             android:hint="Dark Theme"
+            android:clickable="true"
+            android:focusable="true"
             android:padding="8dp"
-            android:textColorHint="#000000"
+            android:textColorHint="@color/white"
             android:textSize="18sp" />
         <TextView
             android:id="@+id/new_theme_text"
@@ -69,8 +75,8 @@
             android:layout_marginBottom="-10dp"
             android:gravity="center"
             android:layout_marginStart="43dp"
-            android:text="Switch from light theme to dark theme"
-            android:textColor="@color/black_overlay"
+            android:text="Switch between light theme and dark theme"
+            android:textColor="@color/gray_very_light"
             android:textSize="13sp" />
 
         <ToggleButton
@@ -100,9 +106,12 @@
             android:background="@android:color/transparent"
             android:drawableStart="@drawable/ic_update"
             android:drawablePadding="12dp"
+            android:foreground="?selectableItemBackground"
             android:hint="Update"
+            android:clickable="true"
+            android:focusable="true"
             android:padding="8dp"
-            android:textColorHint="#000000"
+            android:textColorHint="@color/white"
             android:textSize="18sp" />
         <TextView
             android:id="@+id/new_update_data"
@@ -112,7 +121,7 @@
             android:layout_marginBottom="-10dp"
             android:layout_marginStart="43dp"
             android:text="Update to the latest version with latest features"
-            android:textColor="@color/black_overlay"
+            android:textColor="@color/gray_very_light"
             android:textSize="13sp" />
         <View
             android:id="@+id/update_view"
@@ -133,7 +142,10 @@
             android:drawablePadding="12dp"
             android:hint="Help &amp; Feedback"
             android:padding="8dp"
-            android:textColorHint="#000000"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            android:textColorHint="@color/white"
             android:textSize="18sp" />
         <TextView
             android:id="@+id/new_help_tv"
@@ -142,8 +154,8 @@
             android:layout_alignBottom="@id/help_feedback"
             android:layout_marginBottom="-10dp"
             android:layout_marginStart="43dp"
-            android:text="Contact us for help and send us feedback"
-            android:textColor="@color/black_overlay"
+            android:text="Contact us for help and feedback"
+            android:textColor="@color/gray_very_light"
             android:textSize="13sp" />
         <View
             android:id="@+id/help_view"
@@ -162,9 +174,12 @@
             android:background="@android:color/transparent"
             android:drawableStart="@drawable/ic_like"
             android:drawablePadding="12dp"
+            android:foreground="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
             android:hint="Rate Us"
             android:padding="8dp"
-            android:textColorHint="#000000"
+            android:textColorHint="@color/white"
             android:textSize="18sp" />
         <TextView
             android:id="@+id/new_like_tv"
@@ -173,8 +188,9 @@
             android:layout_alignBottom="@id/like_us"
             android:layout_marginBottom="-10dp"
             android:layout_marginStart="43dp"
+            android:background="@android:color/transparent"
             android:text="Rate us 5 star on Google Play"
-            android:textColor="@color/black_overlay"
+            android:textColor="@color/gray_very_light"
             android:textSize="13sp" />
 
         <View

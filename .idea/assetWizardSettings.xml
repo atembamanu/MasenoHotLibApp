@@ -111,7 +111,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/opt/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/toggle/ic_star_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/opt/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/communication/ic_mail_outline_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -121,8 +121,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="2a32a6" />
-                            <entry key="outputName" value="ic_like" />
+                            <entry key="color" value="ffffff" />
+                            <entry key="outputName" value="ic_mail" />
                             <entry key="overrideSize" value="true" />
                             <entry key="sourceFile" value="$USER_HOME$" />
                           </map>

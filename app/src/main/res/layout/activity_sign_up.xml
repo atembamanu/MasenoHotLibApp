@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingLeft="18dp"
     android:paddingRight="18dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="@drawable/new_login">
+    android:background="@drawable/new_login"
+    tools:context=".SignUp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,10 +23,8 @@
 
             <ImageView
                 android:layout_width="240dp"
-                android:layout_height="120dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="48dp"
-                android:layout_marginBottom="0dp"
                 android:padding="16dp"
                 android:src="@drawable/icon" />
 
@@ -31,15 +32,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:padding="16dp"
-                android:text="Maseno HotLib App"
-                android:textColor="@color/colorAccent"
-                android:textSize="16dp" />
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="#f16f7d"
+                android:textSize="18sp"
+                android:background="@drawable/background_login" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="50dp"
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/ic_user"
                 android:drawablePadding="12dp"
@@ -58,12 +65,31 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="20dp"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/ic_lock"
+                android:drawableLeft="@drawable/ic_mail"
                 android:drawablePadding="12dp"
                 android:ems="10"
-                android:hint="......."
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textColorHint="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_password"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Password"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="8dp"
@@ -74,54 +100,54 @@
                 android:layout_height="1dp"
                 android:background="#f9d7db" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:padding="8dp"
-                android:text="Remember me "
-                android:textColor="#fff" />
-
-            <Button
-                android:id="@+id/login"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/background_login"
-                android:clickable="true"
-                android:padding="16dp"
-                android:text="Log in"
-                android:textAllCaps="false"
-                android:textColor="#f16f7d"
-                android:textSize="18sp" />
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_confirm_password"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textColorHint="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
 
             <Button
                 android:id="@+id/signup"
                 style="@style/Base.TextAppearance.AppCompat.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="18dp"
                 android:background="@drawable/background_signup"
                 android:clickable="true"
                 android:padding="16dp"
                 android:text="Sign up"
                 android:textAllCaps="false"
                 android:textColor="#fff"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:focusable="true" />
 
             <TextView
-                android:id="@+id/forgot_password"
+                android:id="@+id/have_account"
                 style="@style/TextAppearance.AppCompat.Body2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:clickable="true"
                 android:padding="16dp"
-                android:text="Forgot Password? "
-                android:textColor="#fff" />
+                android:text="I have an account! "
+                android:textColor="#fff"
+                android:focusable="true" />
 
         </LinearLayout>
     </ScrollView>
+
 
 </LinearLayout>

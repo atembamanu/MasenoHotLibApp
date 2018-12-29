@@ -62,10 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-
-            android:layout_alignParentBottom="true"
-
-            >
+            android:layout_alignParentBottom="true">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -77,9 +74,5 @@
                 android:text="Copyright@2019Betahood All Rights Reserved" />
 
         </RelativeLayout>
-
-
     </LinearLayout>
-
-
 </ScrollView>
