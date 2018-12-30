@@ -28,6 +28,7 @@
 
             <android.support.v7.widget.CardView
                 android:foreground="?selectableItemBackground"
+                android:id="@+id/notes"
                 android:clickable="true"
                 android:layout_width="160dp"
                 android:layout_margin="10dp"
@@ -62,17 +63,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+                        android:id="@+id/downloadnotes"
                         android:text="Download Lecture Notes"
                         android:padding="5dp"
                         android:textColor="@color/darkergray"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
+                android:id="@+id/pastpapers"
                 android:foreground="?selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="160dp"
                 android:layout_margin="10dp"
-                android:layout_height="190dp">
+                android:layout_height="190dp"
+                android:focusable="true">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="vertical"
@@ -107,11 +111,13 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
+                android:id="@+id/tutorials"
                 android:foreground="?selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="160dp"
                 android:layout_margin="10dp"
-                android:layout_height="190dp">
+                android:layout_height="190dp"
+                android:focusable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -149,11 +155,13 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
+                android:id="@+id/resources"
                 android:foreground="?selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="160dp"
                 android:layout_margin="10dp"
-                android:layout_height="190dp">
+                android:layout_height="190dp"
+                android:focusable="true">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="vertical"
@@ -188,11 +196,13 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
+                android:id="@+id/challenges"
                 android:foreground="?selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="160dp"
                 android:layout_margin="10dp"
-                android:layout_height="190dp">
+                android:layout_height="190dp"
+                android:focusable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -230,11 +240,13 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
+                android:id="@+id/howto"
                 android:foreground="?selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="160dp"
                 android:layout_margin="10dp"
-                android:layout_height="190dp">
+                android:layout_height="190dp"
+                android:focusable="true">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="vertical"
