@@ -9,10 +9,12 @@ import android.widget.TextView;
 
 public class login extends AppCompatActivity {
 
+    Button login, signup;
+    TextView username, password, forgot_password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        final Button login, signup;
-        TextView forgot_password;
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
@@ -43,5 +45,7 @@ public class login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        username = findViewById(R.id.username);
+        password = findViewById(R.id.password);
     }
 }
