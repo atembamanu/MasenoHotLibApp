@@ -2,24 +2,23 @@ package com.example.betahood.masenohotlibapp;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
+import android.view.View;
+import android.widget.GridLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    GridLayout gridLayout;
      @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +34,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+         gridLayout = (GridLayout) findViewById(R.id.mainGrid);
+
+         setSingleEvent(gridLayout);
 
     }
 
@@ -67,8 +70,6 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             Intent intent=new Intent(MainActivity.this, settings_activity.class);
             startActivity(intent);
-
-
             return true;
         }
 
@@ -137,6 +138,76 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    private void setSingleEvent(GridLayout gridLayout) {
+        for (int i = 0; i < gridLayout.getChildCount(); i++) {
+            CardView cardView = (CardView) gridLayout.getChildAt(i);
+            final int finalI = i;
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
+                    if (finalI == 0) {
+                        Intent intent = new Intent(MainActivity.this, lecture_notes.class);
+                        startActivity(intent);
+
+                    } else if (finalI == 1) {
+
+                        Intent intents = new Intent(MainActivity.this, PastPapers.class);
+                        startActivity(intents);
+                    } else if (finalI == 2) {
+                        Intent intents = new Intent(MainActivity.this, Tutorials.class);
+                        startActivity(intents);
+
+                    } else if (finalI == 3) {
+
+                        Intent intents = new Intent(MainActivity.this, Resources.class);
+                        startActivity(intents);
+                    } else if (finalI == 4) {
+                        Intent intents = new Intent(MainActivity.this, Challenges.class);
+                        startActivity(intents);
+
+                    } else if (finalI == 5) {
+                        Intent intents = new Intent(MainActivity.this, HowTo.class);
+                        startActivity(intents);
+
+                    }
+
+                }
+            });
+        }
+    }
+
+
+//    public void OpenActivity(View view) {
+//        switch (view.getId()){
+//            case R.id.downloadnotes:
+//                Intent intent =new Intent(MainActivity.this, LectureNotes.class);
+//                startActivity(intent);
+//                break;
+//
+//            case R.id.pastpapers:
+//
+//                break;
+//
+//            case R.id.tutorials:
+//
+//                break;
+//
+//            case R.id.resources:
+//
+//                break;
+//
+//            case R.id.challenges:
+//
+//                break;
+//
+//            case R.id.howto:
+//
+//                break;
+//
+//
+//            default:
+//
+//        }
 
 }
