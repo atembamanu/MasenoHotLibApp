@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"
             android:text="COURSE"
+            android:textStyle="bold"
             android:fontFamily="monospace"
             android:textColor="@color/black"
             android:textSize="15sp"
@@ -40,6 +41,7 @@
             android:text="ACADEMIC YEAR"
             android:fontFamily="monospace"
             android:textSize="15sp"
+            android:textStyle="bold"
             android:layout_marginBottom="5dp"/>
 
         <Spinner
@@ -57,6 +59,7 @@
             android:textColor="@color/black"
             android:text="SEMESTER"
             android:fontFamily="monospace"
+            android:textStyle="bold"
             android:textSize="15sp"
             android:layout_marginBottom="5dp"/>
 
@@ -75,6 +78,7 @@
             android:layout_marginTop="10dip"
             android:text="UNIT CODE"
             android:fontFamily="monospace"
+            android:textStyle="bold"
             android:textSize="15sp"
             android:layout_marginBottom="5dp"/>
 
@@ -100,6 +104,7 @@
                 android:background="@drawable/find"
                 android:fontFamily="monospace"
                 android:text="FIND RESOURCE"
+                android:textStyle="bold"
                 android:paddingEnd="24dp"
                 android:paddingStart="24dp"
                 android:textSize="16sp" />
