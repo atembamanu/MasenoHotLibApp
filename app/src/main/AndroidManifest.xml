@@ -15,6 +15,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.VIEW" />
@@ -32,9 +33,11 @@
         </activity>
         <activity
             android:name=".login"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".splash"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.MAIN" />
@@ -46,30 +49,39 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AboutUs"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.pop" />
         <activity
             android:name=".SignUp"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ResetPassword"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".lecture_notes"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".PastPapers"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Tutorials"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Resources"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Challenges"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".HowTo"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
     </application>
 
