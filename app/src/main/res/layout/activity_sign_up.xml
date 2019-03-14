@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,9 +12,13 @@
     android:background="@drawable/new_login"
     tools:context=".SignUp">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/signupback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:contentDescription="gobacktologinpage"
+        android:src="@drawable/ic_back" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,11 +41,11 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
                 style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:text="Register"
+                android:maxLines="1"
+                android:text="Create account"
                 android:textAllCaps="false"
-                android:textColor="#f16f7d"
-                android:textSize="18sp"
-                android:background="@drawable/background_login" />
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/username"
@@ -132,7 +136,7 @@
                 android:background="@drawable/background_signup"
                 android:clickable="true"
                 android:padding="16dp"
-                android:text="Sign up"
+                android:text="SIGNUP"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="18sp"
@@ -151,7 +155,4 @@
                 android:focusable="true" />
 
         </LinearLayout>
-    </ScrollView>
-
-
-</LinearLayout>
+</RelativeLayout>

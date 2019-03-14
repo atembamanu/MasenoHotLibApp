@@ -16,16 +16,10 @@
     <string name="trouble_login">Having trouble logging in? Get help here.</string>
 
     <string-array name="program_arrays">
-        <item>--Click here choose--</item>
-        <item>Computer Science</item>
-        <item>Information Technology</item>
-        <item>Computer Technology</item>
-        <item>ICTM</item>
-    </string-array>
-    <string-array name="student_year">
-        <item>Year I</item>
-        <item>Year II</item>
-        <item>Year III</item>
-        <item>Year IV</item>
+        <item>From DB</item>
+        <item>item 1</item>
+        <item>item 2</item>
+        <item>item 3</item>
+        <item>item 4</item>
     </string-array>
 </resources>
