@@ -9,6 +9,16 @@ import android.os.Bundle;
 public class Resources extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private int[] tabIcons ={
+            R.drawable.ic_programming,
+            R.drawable.ic_networking,
+            R.drawable.ic_blockchain,
+            R.drawable.ic_datascience,
+            R.drawable.ic_webdev,
+            R.drawable.ic_scripting,
+            R.drawable.ic_intelligence
+
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +42,17 @@ public class Resources extends AppCompatActivity {
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+        setupTabIcons();
 
+    }
+
+    private void setupTabIcons() {
+        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+        tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+        tabLayout.getTabAt(3).setIcon(tabIcons[3]);
+        tabLayout.getTabAt(4).setIcon(tabIcons[4]);
+        tabLayout.getTabAt(5).setIcon(tabIcons[5]);
+        tabLayout.getTabAt(6).setIcon(tabIcons[6]);
     }
 }

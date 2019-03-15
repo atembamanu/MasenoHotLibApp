@@ -37,6 +37,7 @@
     </group>
 
     <item android:title="Support Us"
+        android:id="@+id/support"
         android:checkable="true">
         <menu>
             <item

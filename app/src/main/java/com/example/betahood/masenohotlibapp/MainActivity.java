@@ -104,10 +104,17 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_studentportal) {
             //handle the student portal action
-            String uri = "http://41.89.192.20/Login.aspx";
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse(uri));
-            startActivity(intent);
+            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem menuItem) {
+                    String uri = "http://41.89.192.20/Login.aspx";
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(uri));
+                    startActivity(intent);
+                    return  false;
+                }
+            });
+
 
         }
         else if (id == R.id.nav_share) {
@@ -121,15 +128,22 @@ public class MainActivity extends AppCompatActivity
                     share.putExtra(android.content.Intent.EXTRA_SUBJECT, "Maseno HotLib App");
                     share.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
                     startActivity(Intent.createChooser(share, "Share with friends"));
-                    return true;
+                    return false;
                 }
             });
         }
         else if (id == R.id.nav_about) {
 
             //handle the about us action
-            Intent intent = new Intent(MainActivity.this, AboutUs.class);
-            startActivity(intent);
+            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem menuItem) {
+                    Intent intent = new Intent(MainActivity.this, AboutUs.class);
+                    startActivity(intent);
+                    return false;
+                }
+            });
+
         }
 
 

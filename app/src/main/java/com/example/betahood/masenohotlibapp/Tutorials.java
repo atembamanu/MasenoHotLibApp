@@ -10,6 +10,13 @@ public class Tutorials extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
+    private int[] tabIcons ={
+            R.drawable.ic_video,
+            R.drawable.ic_pdf,
+            R.drawable.ic_links
+
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,15 +25,28 @@ public class Tutorials extends AppCompatActivity {
         actionBar.setTitle("Hot Tutorials");
 
 
-        tabLayout = (TabLayout) findViewById(R.id.tabtutorials_tab);
-        viewPager = (ViewPager) findViewById(R.id.viewpager_id);
 
+        viewPager = (ViewPager) findViewById(R.id.viewpager_id);
+        setupViewPager(viewPager);
+        tabLayout = (TabLayout) findViewById(R.id.tabtutorials_tab);
+        tabLayout.setupWithViewPager(viewPager);
+        setupTabIcons();
+
+
+    }
+    private void setupTabIcons() {
+        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+        tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+    }
+    private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapterTutorials adapter = new ViewPagerAdapterTutorials(getSupportFragmentManager());
         adapter.AddFragment(new FragmentVideos(), "Hot Videos");
         adapter.AddFragment(new FragmentPdfs(), "Free PDFs");
         adapter.AddFragment(new FragmentLinks(), "Direct Links");
 
         viewPager.setAdapter(adapter);
-        tabLayout.setupWithViewPager(viewPager);
     }
+
+
 }

@@ -49,7 +49,6 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AboutUs"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.pop" />
         <activity
             android:name=".SignUp"

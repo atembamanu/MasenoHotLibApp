@@ -14,6 +14,7 @@
     <string name="recover_your_password">Recover Your Password</string>
     <string name="email_address_hint">example@gmail.com</string>
     <string name="trouble_login">Having trouble logging in? Get help here.</string>
+    <string name="rights_reserved">Copyright @ 2019 Betahood Inc All Rights Reserved</string>
 
     <string-array name="program_arrays">
         <item>From DB</item>
