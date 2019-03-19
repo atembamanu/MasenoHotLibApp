@@ -1,4 +1,4 @@
-package com.example.betahood.masenohotlibapp;
+package com.example.betahood.masenohotlibapp.Views.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,17 +8,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentNetworking extends Fragment {
+import com.example.betahood.masenohotlibapp.R;
+
+
+public class FragmentPdfs extends Fragment {
     View view;
 
-    public FragmentNetworking() {
+    public FragmentPdfs() {
 
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.networking_fragment, container, false);
+        view = inflater.inflate(R.layout.pdf_fragment, container, false);
         return view;
     }
 }

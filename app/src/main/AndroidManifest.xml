@@ -19,7 +19,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.BROWSABLE" />
+               <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
                     android:scheme="http"
@@ -32,11 +32,11 @@
 
         </activity>
         <activity
-            android:name=".login"
+            android:name=".Views.Activities.login"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".splash"
+            android:name=".Views.Activities.splash"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter android:label="@string/app_name">
@@ -45,43 +45,58 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".settings_activity"
-            android:parentActivityName=".MainActivity" />
+            android:name=".Views.Activities.settings_activity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Settings"/>
         <activity
-            android:name=".AboutUs"
+            android:name=".Views.Activities.AboutUs"
             android:theme="@style/AppTheme.pop" />
         <activity
-            android:name=".SignUp"
+            android:name=".Views.Activities.SignUp"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ResetPassword"
+            android:name=".Views.Activities.ResetPassword"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".lecture_notes"
+            android:name=".Views.Activities.lecture_notes"
             android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Lecture Resources"
+            />
         <activity
-            android:name=".PastPapers"
+            android:name=".Views.Activities.PastPapers"
             android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Past Papers"/>
         <activity
-            android:name=".Tutorials"
+            android:name=".Views.Activities.Tutorials"
             android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Hot Tutorials"/>
         <activity
-            android:name=".Resources"
+            android:name=".Views.Activities.Resources"
             android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Resources"/>
         <activity
-            android:name=".Challenges"
+            android:name=".Views.Activities.Challenges"
             android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Challenges"/>
         <activity
-            android:name=".HowTo"
+            android:name=".Views.Activities.HowTo"
             android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="How To..."/>
     </application>
 
 </manifest>

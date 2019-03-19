@@ -1,25 +1,40 @@
-package com.example.betahood.masenohotlibapp;
+package com.example.betahood.masenohotlibapp.Views.Activities;
 
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.Toast;
+
+import com.example.betahood.masenohotlibapp.R;
 
 public class lecture_notes extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
     //    private static final String[] paths_program = {"Computer Science", "Information Technology", "Computer Technology", "ICTM"};
 //    private static final String[] paths_year = {"Year I", "Yea II", "Year III", "Year IV"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow();
+            w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lecture_notes);
 
-        ActionBar actionBar = getSupportActionBar();
-        assert actionBar != null;
-        actionBar.setTitle("Lecturer Resources");
+
+
+            Toolbar toolbar = findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+//        ActionBar actionBar = getSupportActionBar();
+//        assert actionBar != null;
+//        actionBar.setTitle("Lecturer Resources");
 
         //Spinner For the programs
 //        Spinner spinner1 = (Spinner) findViewById(R.id.course_spinner);

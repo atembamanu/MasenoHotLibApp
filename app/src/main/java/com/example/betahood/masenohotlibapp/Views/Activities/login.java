@@ -1,11 +1,17 @@
-package com.example.betahood.masenohotlibapp;
+package com.example.betahood.masenohotlibapp.Views.Activities;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.betahood.masenohotlibapp.MainActivity;
+import com.example.betahood.masenohotlibapp.R;
 
 public class login extends AppCompatActivity {
 
@@ -14,6 +20,12 @@ public class login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow();
+            w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        }
 
 
         super.onCreate(savedInstanceState);
@@ -25,6 +37,7 @@ public class login extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(login.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

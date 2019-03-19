@@ -6,7 +6,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/new_login"
-    tools:context=".settings_activity">
+    tools:context=".Views.Activities.settings_activity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_marginTop="24dp"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:background="@color/colorTransparent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="@color/gray_very_light"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.SwitchCompat
         android:id="@+id/push_notifications"

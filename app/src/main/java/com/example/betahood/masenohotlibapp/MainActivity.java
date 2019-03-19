@@ -2,6 +2,7 @@ package com.example.betahood.masenohotlibapp;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,14 +14,29 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.GridLayout;
-import android.widget.Toast;
+
+import com.example.betahood.masenohotlibapp.Views.Activities.AboutUs;
+import com.example.betahood.masenohotlibapp.Views.Activities.Challenges;
+import com.example.betahood.masenohotlibapp.Views.Activities.HowTo;
+import com.example.betahood.masenohotlibapp.Views.Activities.PastPapers;
+import com.example.betahood.masenohotlibapp.Views.Activities.Resources;
+import com.example.betahood.masenohotlibapp.Views.Activities.Tutorials;
+import com.example.betahood.masenohotlibapp.Views.Activities.lecture_notes;
+import com.example.betahood.masenohotlibapp.Views.Activities.settings_activity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     GridLayout gridLayout;
      @Override
     protected void onCreate(Bundle savedInstanceState) {
+         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+             Window w = getWindow();
+             w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+             w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -123,7 +139,7 @@ public class MainActivity extends AppCompatActivity
                 @Override
                 public boolean onMenuItemClick(MenuItem menuItem) {
                     Intent share = new Intent(Intent.ACTION_SEND);
-                    share.setType("plain/text");
+                    share.setType("text/plain");
                     String shareBodyText = "Check this cool learning android application <Maseno HotLib App on Play Store>";
                     share.putExtra(android.content.Intent.EXTRA_SUBJECT, "Maseno HotLib App");
                     share.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);

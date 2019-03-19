@@ -1,4 +1,4 @@
-package com.example.betahood.masenohotlibapp;
+package com.example.betahood.masenohotlibapp.HelperClasses;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;

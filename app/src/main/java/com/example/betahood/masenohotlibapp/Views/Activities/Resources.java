@@ -1,10 +1,23 @@
-package com.example.betahood.masenohotlibapp;
+package com.example.betahood.masenohotlibapp.Views.Activities;
 
+import android.os.Build;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Window;
+import android.view.WindowManager;
+
+import com.example.betahood.masenohotlibapp.Views.Fragments.BlockchainFragment;
+import com.example.betahood.masenohotlibapp.Views.Fragments.DatascienceFragment;
+import com.example.betahood.masenohotlibapp.Views.Fragments.FragementProgramming;
+import com.example.betahood.masenohotlibapp.Views.Fragments.FragmentArtificial;
+import com.example.betahood.masenohotlibapp.Views.Fragments.FragmentNetworking;
+import com.example.betahood.masenohotlibapp.Views.Fragments.FragmentScripting;
+import com.example.betahood.masenohotlibapp.Views.Fragments.WebDevFragment;
+import com.example.betahood.masenohotlibapp.HelperClasses.ViewPagerAdapterResources;
+import com.example.betahood.masenohotlibapp.R;
 
 public class Resources extends AppCompatActivity {
     private TabLayout tabLayout;
@@ -22,10 +35,17 @@ public class Resources extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow();
+            w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resources);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Resources");
+
+        Toolbar toolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         tabLayout = (TabLayout) findViewById(R.id.tabresources_tab);
